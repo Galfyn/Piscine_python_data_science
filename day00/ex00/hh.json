@@ -773,6 +773,89 @@
       "accept_temporary": false
     },
     {
+      "id": "69651789",
+      "premium": false,
+      "name": "Data Scientist",
+      "department": null,
+      "has_test": false,
+      "response_letter_required": false,
+      "area": {
+        "id": "2",
+        "name": "Санкт-Петербург",
+        "url": "https://api.hh.ru/areas/2"
+      },
+      "salary": null,
+      "type": {
+        "id": "open",
+        "name": "Открытая"
+      },
+      "address": {
+        "city": "Санкт-Петербург",
+        "street": "улица Рентгена",
+        "building": "5А",
+        "description": null,
+        "lat": 59.963224,
+        "lng": 30.320117,
+        "raw": "Санкт-Петербург, улица Рентгена, 5А",
+        "metro": {
+          "station_name": "Петроградская",
+          "line_name": "Московско-Петроградская",
+          "station_id": "15.215",
+          "line_id": "15",
+          "lat": 59.966389,
+          "lng": 30.311293
+        },
+        "metro_stations": [
+          {
+            "station_name": "Петроградская",
+            "line_name": "Московско-Петроградская",
+            "station_id": "15.215",
+            "line_id": "15",
+            "lat": 59.966389,
+            "lng": 30.311293
+          }
+        ],
+        "id": "1215292"
+      },
+      "response_url": null,
+      "sort_point_distance": null,
+      "published_at": "2022-09-15T09:38:00+0300",
+      "created_at": "2022-09-15T09:38:00+0300",
+      "archived": false,
+      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=69651789",
+      "insider_interview": null,
+      "url": "https://api.hh.ru/vacancies/69651789?host=hh.ru",
+      "adv_response_url": "https://api.hh.ru/vacancies/69651789/adv_response?host=hh.ru",
+      "alternate_url": "https://hh.ru/vacancy/69651789",
+      "relations": [],
+      "employer": {
+        "id": "2053040",
+        "name": "Click",
+        "url": "https://api.hh.ru/employers/2053040",
+        "alternate_url": "https://hh.ru/employer/2053040",
+        "logo_urls": {
+          "90": "https://hhcdn.ru/employer-logo/2745695.jpeg",
+          "240": "https://hhcdn.ru/employer-logo/2745696.jpeg",
+          "original": "https://hhcdn.ru/employer-logo-original/576106.jpg"
+        },
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=2053040",
+        "trusted": true
+      },
+      "snippet": {
+        "requirement": "Python для анализа и визуализации данных и машинного обучения от 2-х лет. Знание SQL (написание запросов, понимание принципов организации...",
+        "responsibility": "Работать над рекомендательными системами, используя современные теоретические наработки - Multi-Armed Bandits, Counterfactual Learning, Factorization Machines, etc.. Планировать, проводить и оценивать..."
+      },
+      "contacts": null,
+      "schedule": {
+        "id": "remote",
+        "name": "Удаленная работа"
+      },
+      "working_days": [],
+      "working_time_intervals": [],
+      "working_time_modes": [],
+      "accept_temporary": false
+    },
+    {
       "id": "69798601",
       "premium": false,
       "name": "Скоринг-аналитик / Data scientist / Аналитик (скоринг)",
@@ -857,89 +940,6 @@
       "schedule": {
         "id": "fullDay",
         "name": "Полный день"
-      },
-      "working_days": [],
-      "working_time_intervals": [],
-      "working_time_modes": [],
-      "accept_temporary": false
-    },
-    {
-      "id": "69651789",
-      "premium": false,
-      "name": "Data Scientist",
-      "department": null,
-      "has_test": false,
-      "response_letter_required": false,
-      "area": {
-        "id": "2",
-        "name": "Санкт-Петербург",
-        "url": "https://api.hh.ru/areas/2"
-      },
-      "salary": null,
-      "type": {
-        "id": "open",
-        "name": "Открытая"
-      },
-      "address": {
-        "city": "Санкт-Петербург",
-        "street": "улица Рентгена",
-        "building": "5А",
-        "description": null,
-        "lat": 59.963224,
-        "lng": 30.320117,
-        "raw": "Санкт-Петербург, улица Рентгена, 5А",
-        "metro": {
-          "station_name": "Петроградская",
-          "line_name": "Московско-Петроградская",
-          "station_id": "15.215",
-          "line_id": "15",
-          "lat": 59.966389,
-          "lng": 30.311293
-        },
-        "metro_stations": [
-          {
-            "station_name": "Петроградская",
-            "line_name": "Московско-Петроградская",
-            "station_id": "15.215",
-            "line_id": "15",
-            "lat": 59.966389,
-            "lng": 30.311293
-          }
-        ],
-        "id": "1215292"
-      },
-      "response_url": null,
-      "sort_point_distance": null,
-      "published_at": "2022-09-15T09:38:00+0300",
-      "created_at": "2022-09-15T09:38:00+0300",
-      "archived": false,
-      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=69651789",
-      "insider_interview": null,
-      "url": "https://api.hh.ru/vacancies/69651789?host=hh.ru",
-      "adv_response_url": "https://api.hh.ru/vacancies/69651789/adv_response?host=hh.ru",
-      "alternate_url": "https://hh.ru/vacancy/69651789",
-      "relations": [],
-      "employer": {
-        "id": "2053040",
-        "name": "Click",
-        "url": "https://api.hh.ru/employers/2053040",
-        "alternate_url": "https://hh.ru/employer/2053040",
-        "logo_urls": {
-          "90": "https://hhcdn.ru/employer-logo/2745695.jpeg",
-          "240": "https://hhcdn.ru/employer-logo/2745696.jpeg",
-          "original": "https://hhcdn.ru/employer-logo-original/576106.jpg"
-        },
-        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=2053040",
-        "trusted": true
-      },
-      "snippet": {
-        "requirement": "Python для анализа и визуализации данных и машинного обучения от 2-х лет. Знание SQL (написание запросов, понимание принципов организации...",
-        "responsibility": "Работать над рекомендательными системами, используя современные теоретические наработки - Multi-Armed Bandits, Counterfactual Learning, Factorization Machines, etc.. Планировать, проводить и оценивать..."
-      },
-      "contacts": null,
-      "schedule": {
-        "id": "remote",
-        "name": "Удаленная работа"
       },
       "working_days": [],
       "working_time_intervals": [],

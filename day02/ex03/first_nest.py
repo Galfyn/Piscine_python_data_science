@@ -1,62 +1,58 @@
-import os
 from sys import argv
 
 
 class Research:
-    def __init__(self, filename):
-        self.filename = filename
+    def __init__(self, path):
+        self.filename = path
 
     def file_reader(self, has_header=True):
-        if not os.access(self.filename, os.R_OK):
-            raise ValueError('File not found')
         with open(self.filename, 'r') as f:
-            line = f.readline()
-            if len(line) < 1:
-                raise ValueError("File error size")
-            if line[0] != 'head':
-                has_header = False
-            if has_header and len(line[0].split(',')) != 2:
-                raise ValueError("Header incorrect")
-            hand_line = []
+            line = f.readlines()
+            if line[0] == '0,1\n' or line[0] == '1,0\n':
+                self.has_header = False
+            start = 0
             if has_header:
-                hand_line = line[1:]
-            else:
-                hand_line = line
-            for line in hand_line:
-                if line != "0, 1" and line != "1,0":
-                    raise ValueError("Data in the file incorrect")
-            result = []
-            for line in hand_line:
-                str = line.split(',')
-                nb = []
-                for nb in str:
-                    nb.append(int(nb))
-                result.append(nb)
-
-            return result
+                start = 1
+            lst_list = []
+            for i in range(start, len(line)):
+                lst_i = [int(line[i][0])]
+                lst_i.append(int(line[i][2]))
+                lst_list.append(lst_i)
+            return lst_list
 
     class Calculations:
-        def counts(self, data):
+        def counts(lst_list):
             heads = 0
             tails = 0
-            for pair in data:
-                heads += pair[0]
-                tails += pair[1]
+            for i in range(len(lst_list)):
+                if lst_list[i][0] == 1:
+                    heads += 1
+                else:
+                    tails += 1
             return heads, tails
 
-        def fractions(self, heads, tails):
-            first = heads * 100 / (heads + tails)
-            second = tails * 100 / (heads + tails)
-            return first, second
+        def fractions(lst_count):
+            sum_count = lst_count[0] + lst_count[1]
+            return lst_count[0] / sum_count, lst_count[1] / sum_count
+
+
+def check_arg(path):
+    with open(path, 'r') as file:
+        line = file.readlines()
+        if len(line) == 0 or (len(line) == 1 and (line[0] != '0,1\n' and line[0] != '1,0\n')):
+            raise Exception("Error file")
+        if len(line) > 1:
+            for i in range(1, len(line) - 1):
+                if line[i] != '0,1\n' and line[i] != '1,0\n':
+                    raise Exception("Error file")
 
 
 if __name__ == '__main__':
     if len(argv) != 2:
         raise Exception("Error argument")
-    res = Research(argv)
-    print(res.file_reader())
-    calc = res.Calculations()
-    calc2 = calc.counts(res.file_reader())
-    print(calc2[0], calc2[1])
-    frac = calc.fractions(calc[0], calc[1])
-    print(frac[0], frac[1])
+    list_lists = Research(argv[1]).file_reader()
+    print(list_lists)
+    list_counts = Research.Calculations.counts(list_lists)
+    print(list_counts[0], list_counts[1])
+    list_fractions = Research.Calculations.fractions(list_counts)
+    print(list_fractions[0], list_fractions[1])

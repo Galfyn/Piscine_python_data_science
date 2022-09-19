@@ -2,10 +2,9 @@
 class Research:
     def file_reader(self):
         with open('../ex00/data.csv', 'r') as f:
-            text = f.read()
-            return text
+            return f.read()
 
 
 if __name__ == '__main__':
-    Res = Research()
-    print(Res.file_reader())
+    res = Research()
+    print(res.file_reader())
